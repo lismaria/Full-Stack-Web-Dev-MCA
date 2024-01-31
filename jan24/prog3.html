@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Multiplicand: <input type="text" name="multiplicand" id="m"> <br><br>
+        No of Terms: <input type="text" name="noofterms" id="t"> <br><br>
+        <button onclick="mul()">Multiplication Table</button>
+        <div id="mulT"></div>
+        <script>
+            function mul() {
+                var x = document.getElementById("m").value;
+                var n = document.getElementById("t").value;
+                var mulT = document.getElementById("mulT");
+                mulT.innerHTML = "Multiplication Table of "+ x +"<br>";
+                for (var i=1; i<=n; i++) {
+                    var res = x*i;
+                    mulT.innerHTML+= x + '*'+ i + '=' + res+'<br>';
+                }
+            }
+        </script>
+    </body>
+</html>

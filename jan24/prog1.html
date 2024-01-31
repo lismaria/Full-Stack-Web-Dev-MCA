@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .item1 { grid-area: header; }
+            .item2 { grid-area: navmenu; }
+            .item3l { grid-area: contentl; }
+            .item3r { grid-area: contentr; }
+            .item4 { grid-area: main; }
+            .item5 { grid-area: footer; }
+
+            .grid-container {
+                display: grid;
+                grid-template-rows: 1fr 1fr 4fr 1fr;
+                grid-template-areas:
+                    'header header header header header'
+                    'navmenu navmenu navmenu navmenu navmenu' 
+                    'contentl main main main contentr'
+                    'footer footer footer footer footer';
+                gap: 5px;
+                color: green;
+            }
+
+            .grid-container > div {
+                text-align: center;
+                padding: 10px;
+                font-family: Verdana, sans-serif;
+                color: green;
+                border: 1px black solid;
+                display: grid;
+                place-items: center;
+            }
+        </style>
+    </head>
+    <body >
+        <div class="grid-container">
+            <div class="item1">Header</div>
+            <div class="item2">Navigation Menu</div>
+            <div class="item3l">Content</div>  
+            <div class="item3r">Content</div>  
+            <div class="item4">Main <br> Content</div>
+            <div class="item5">Footer</div>
+        </div>
+    </body>
+</html>

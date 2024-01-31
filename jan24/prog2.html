@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Para 1 and 2</h1>
+        <p class="c1">
+            1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem cupiditate illo aut
+            consequuntur! Repellendus, veniam! Ducimus tempore quisquam eligendi, ullam, ipsam ex a velit
+            eos itaque possimus accusantium nisi tempora?
+        </p>
+        <p>
+            2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi aperiam deleniti quas quis
+            consequatur, consequuntur natus! Error exercitationem nemo soluta mollitia voluptatibus quo
+            suscipit ullam blanditiis quibusdam, facilis quia dignissimos!
+        </p>
+        <h1 class="c1">Para 2 and 3</h1>
+        <p>
+            3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur
+            voluptate debitis eligendi. Quos recusandae in ratione vel laudantium odit consectetur, vero facilis?
+            Odio, repellat et! Similique sit eos incidunt!
+        </p>
+        <p>
+            4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, impedit sint fugit nemo
+            molestiae pariatur minus? Officia quod doloremque animi, ea laudantium repudiandae mollitia odit
+            at numquam veniam tempora tenetur.
+        </p>
+        <h1>Para 3 and 4</h1>
+        <p class="c1">
+            5. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis enim libero
+            eius iste aut, non inventore beatae dolore, nostrum itaque amet dolorem perspiciatis rerum ea
+            obcaecati molestiae, iusto laudantium et!
+        </p>
+        <p class="c1">
+            6. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, soluta deserunt.
+            Temporibus similique perferendis consequuntur hic corrupti debitis rerum officia nesciunt ipsa?
+            Blanditiis deserunt, quis explicabo ex rerum eius pariatur!
+        </p>
+        <button onclick="disp()">List</button>
+        <div id="content"></div>
+        <script>
+            function disp(){
+                var x = document.getElementById("content");
+                var p = document.getElementsByTagName("p");
+                var h = document.getElementsByTagName("h1");
+                var ec1 = document.getElementsByClassName("c1");
+                var pc1 = document.querySelectorAll("p.c1");
+                outputStr = 'Paragraphs: <br>';
+                for (var i=0; i<p.length; i++) {
+                    console.log("Pi",p[i]);
+                    outputStr += p[i].innerHTML + '<br>'
+                }
+                outputStr += '<br>Headings: <br>'
+                for (var j=0; j<h.length; j++) {
+                    outputStr+=h[j].innerHTML + '<br>'
+                }
+                outputStr += '<br>Elements with class c1: <br>'
+                for (var k=0; k<ec1.length; k++) {
+                    outputStr+=ec1[k].innerHTML + '<br>'
+                }
+                outputStr += '<br>Paragraphs with class c1: <br>'
+                for (var l=0; l<pc1.length; l++) {
+                    outputStr+=pc1[l].innerHTML + '<br>'
+                }
+                x.innerHTML = outputStr;
+            }
+        </script>
+    </body>
+</html>

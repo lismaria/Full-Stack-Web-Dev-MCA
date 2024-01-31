@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Html Table Exercises</title>
+    </head>
+    <body>
+        <form action="" id="pizzaForm">
+            <table border="1">
+                <tr><th colspan="2">Pizza Shop 2.0</th></tr>
+                <tr><td>Name</td><td><input type="text" name="name"></td></tr>
+                <tr>
+                    <td>Pizza Topping</td>
+                    <td>
+                    <input type="radio" name="topping" value="Supreme">Supreme<br/>
+                    <input type="radio" name="topping" value="Vegetarian">Vegetarian<br/>
+                    <input type="radio" name="topping" value="Hawaiian">Hawaiian<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pizza Sauce</td>
+                    <td>
+                        <select name="sauce">
+                            <option value="Tomato">Tomato</option>
+                            <option value="BBQ">BBQ</option>
+                            <option value="Chilli">Chilli</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Optional Extras</td>
+                    <td>
+                        <input type="checkbox" name="cheese" value="Extra Cheese">Extra Cheese
+                        <input type="checkbox" name="glutenfree" value="Gluten Free Base">Gluten Free Base
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Delivery Instructions: <br/> 
+                        <textarea name="delinst" cols="50" rows="7"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!-- <input type="submit" value="Send my Order" onclick="submitForm()"> -->
+                        <button type="button" value="Send my Order" onclick="submitForm()">Send my Order</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div id="output"></div>
+
+        <script>
+            function submitForm() {
+                var output = document.getElementById("output");
+                outputStr = "<h3>Your Order:</h3>";
+                var name = document.forms["pizzaForm"]["name"].value;
+                var topping = document.forms["pizzaForm"]["topping"].value;
+                var sauce = document.forms["pizzaForm"]["sauce"].value;
+                var extras = "";
+                if (document.forms["pizzaForm"]["cheese"].checked) {
+                    extras += document.forms["pizzaForm"]["cheese"].value + "<br>";
+                }
+                if (document.forms["pizzaForm"]["glutenfree"].checked) {
+                    extras += document.forms["pizzaForm"]["glutenfree"].value + "<br>";
+                }
+                var delinst = document.forms["pizzaForm"]["delinst"].value;
+
+                outputStr += "<b>Name:</b> " + name + "<br>";
+                outputStr += "<b>Pizza Topping:</b> " + topping + "<br>";
+                outputStr += "<b>Pizza Sauce:</b> " + sauce + "<br>";
+                outputStr += "<b>Optional Extras:</b><br>" + extras;
+                outputStr += "<b>Delivery Instructions:</b> " + delinst + "<br>";
+                console.log(outputStr);
+                output.innerHTML = outputStr;
+            }
+            </script>
+    </body>
+</html>

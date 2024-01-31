@@ -1,0 +1,42 @@
+<!-- Design a web page with HTML and JS to implement the queue process of Data
+Structure with necessary input controls. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h4><i>Queue</i></h4>
+        Data: <input type="text" name="data" id="data"> <br><br>
+        <button onclick="enqueue()">Enqueue</button>
+        <button onclick="dequeue()">Dequeue</button><br><br>
+        <h4>Queue Elements: </h4>
+        <p id="disp"></p>
+        <script>
+            var arr = [];
+            data = document.getElementById("data");
+            disp = document.getElementById("disp");
+            function enqueue(){
+                dataVal = data.value;
+                if(dataVal.trim() !== "") {
+                    arr.push(dataVal);
+                    update();
+                } else {
+                    alert("Please enter a value before enqueueing."); // Alert the user if the input is empty
+                }
+                
+            }
+            function dequeue(){
+                arr.shift();
+                update();
+            }
+            function update(){
+                console.log("Disp: ", disp);
+                console.log("DispA: ", arr.join());
+                disp.innerHTML = arr.join();
+            }
+    </script>
+    </body>
+</html>
