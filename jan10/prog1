@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <title>HTML Image Exercises</title>
+    </head>
+    <body>
+        <div>
+            <h4>
+                a. Display five different images. Skip two lines between each image. Each image
+                should have a title.
+            </h4>
+            <br/><caption><i>Squirrel</i></caption><br/>
+            <img src="img1.png" alt ="Squirrel" width="150" height="100"> <br/><br/>
+            <br/><caption><i>Squirrel with Camera</i></caption><br/>
+            <img src="img2.png" alt ="Squirrel with Camera" width="150" height="100"> <br/><br/>
+            <br/><caption><i>Dew drop</i></caption><br/>
+            <img src="img3.png" alt ="Dew drop" width="150" height="100"> <br/><br/>
+            <br/><caption><i>Bird</i></caption><br/>
+            <img src="img4.png" alt ="Bird" width="150" height="100"> <br/><br/>
+            <br/><caption><i>Nature</i></caption><br/>
+            <img src="img5.png" alt ="Nature" width="150" height="100"> <br/><br/>
+            
+            <h4>
+                b. Display an image that has a border of size 2, a width of 200, and a height of
+                200.
+            </h4>
+            <img src="img5.png" alt ="Nature" width="200" height="200" style="border: 2px solid black;">
+        </div>
+        <div>
+            <h4>
+                c. Display the image towards the right corner of the webpage
+            </h4>
+            <img src="img1.png" alt="Squirrel" width="150" height="100" style="display: inline-block;">
+            <img src="img2.png" alt="Squirrel with Camera" width="150" height="100" style="display: inline-block;">
+            <img src="img3.png" alt="Dew drop" width="150" height="100" style="display: inline-block;">
+            <img src="img4.png" alt="Bird" width="150" height="100" style="display: inline-block;">
+            <img src="img5.png" alt="Nature" width="150" height="100" style="display: inline-block;">
+        </div>
+    </body>
+</html>
